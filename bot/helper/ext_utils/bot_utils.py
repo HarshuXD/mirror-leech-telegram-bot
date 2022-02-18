@@ -161,6 +161,7 @@ def get_readable_message():
                 msg += f" | <b>⌈➳○ Time : </b>{get_readable_time(download.torrent_info().seeding_time)}"
                 msg += f'\n<b>○ Adder :</b> <i>{download.message.from_user.first_name}</i>'
                 msg += f"\n<b>⌈➳○ To Stop :</b> <code>/{BotCommands.CancelMirror} {download.gid()}</code>"
+                msg += f"\n<b>✥═══ @StarterLeech ═══✥"
             else:
                 msg += f"\n<b>Size: </b>{download.size()}"
             msg += "\n\n"
