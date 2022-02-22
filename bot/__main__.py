@@ -58,7 +58,7 @@ def stats(update, context):
             f'<b>├○Memory Free:</b> {mem_a}\n'\
             f'<b>├○Memory Used:</b> {mem_u}\n'\
             f'<b>|</b>\n' \
-            f'<b>╰──《 ☣️ @HHXDDBOT ☣️ 》</b>'
+            f'<b>╰──《 ☣️ нαяѕнυ_х∂ ☣️ 》</b>'
     sendMessage(stats, context.bot, update)
 
 
