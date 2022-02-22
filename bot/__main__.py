@@ -40,22 +40,22 @@ def stats(update, context):
     mem_t = get_readable_file_size(memory.total)
     mem_a = get_readable_file_size(memory.available)
     mem_u = get_readable_file_size(memory.used)
-    stats = f'<b>╭──《🌐 Bot Stats 🌐》</b>\n' \
+    stats = f'<b>╭──《🌐 Bot Stats 🌐》───╮</b>\n' \
             f'<b>│</b>\n' \
-            f'<b>├○Bot Uptime:</b> {currentTime}\n'\
-            f'<b>├○Total Disk Space:</b> {total}\n'\
-            f'<b>├○Used:</b> {used} |○<b>Free:</b> {free}\n'\
-            f'<b>├○Upload:</b> {sent}\n'\
-            f'<b>├○Download:</b> {recv}\n'\
-            f'<b>├○CPU:</b> {cpuUsage}%\n'\
-            f'<b>├○RAM:</b> {mem_p}%\n'\
-            f'<b>├○DISK:</b> {disk}%\n'\
-            f'<b>├○Physical Cores:</b> {p_core}\n'\
-            f'<b>├○Total Cores:</b> {t_core}\n\n'\
-            f'<b>├○SWAP:</b> {swap_t} | <b>Used:</b> {swap_p}%\n'\
-            f'<b>├○Memory Total:</b> {mem_t}\n'\
-            f'<b>├○Memory Free:</b> {mem_a}\n'\
-            f'<b>├○Memory Used:</b> {mem_u}\n'\
+            f'<b>╰─▸Bot Uptime:</b> {currentTime}\n'\
+            f'<b>╰─▸Total Disk Space:</b> {total}\n'\
+            f'<b>╰─▸Used:</b> {used} |○<b>Free:</b> {free}\n'\
+            f'<b>╰─▸Upload:</b> {sent}\n'\
+            f'<b>╰─▸Download:</b> {recv}\n'\
+            f'<b>╰─▸CPU:</b> {cpuUsage}%\n'\
+            f'<b>╰─▸RAM:</b> {mem_p}%\n'\
+            f'<b>╰─▸DISK:</b> {disk}%\n'\
+            f'<b>╰─▸Physical Cores:</b> {p_core}\n'\
+            f'<b>╰─▸Total Cores:</b> {t_core}\n'\
+            f'<b>╰─▸SWAP:</b> {swap_t} | <b>Used:</b> {swap_p}%\n'\
+            f'<b>╰─▸Memory Total:</b> {mem_t}\n'\
+            f'<b>╰─▸Memory Free:</b> {mem_a}\n'\
+            f'<b>╰─▸Memory Used:</b> {mem_u}\n'\
             f'<b>│</b>\n' \
             f'<b>╰──《 🤴 нαяѕнυ_х∂ 》</b>'
     sendMessage(stats, context.bot, update)
@@ -252,11 +252,11 @@ def main():
     if ospath.isfile(".restartmsg"):
         with open(".restartmsg") as f:
             chat_id, msg_id = map(int, f)
-        bot.edit_message_text("Restarted successfully!\n\n├○Bot Restarts After 24 Hours🤖\n\n├○Restart Your Download Again", chat_id, msg_id)
+        bot.edit_message_text("┏━━━Restarted successfully!\n┣Bot Restarts After 24 Hours🤖\n┣Restart Your Download Again\n┗━━━━━━━━━━━━━", chat_id, msg_id)
         osremove(".restartmsg")
     elif OWNER_ID:
         try:
-            text = "<b>Bot Restarted!\n\n├○Bot Restarts After 24 Hours🤖\n\n├○Restart Your Download Again</b>"
+            text = "<b>┏━━━[Bot Restarted!]━━━━\n┣Bot Restarts After 24 Hours🤖\n┣Restart Your Download Again\n┗━━━━━━━━━━━━━</b>"
             bot.sendMessage(chat_id=OWNER_ID, text=text, parse_mode=ParseMode.HTML)
             if AUTHORIZED_CHATS:
                 for i in AUTHORIZED_CHATS:
