@@ -57,4 +57,4 @@ class TelegraphHelper:
 			return self.edit_page(path, title, content)
 
 
-telegraph=TelegraphHelper('@StarterLeech', 'https://t.me/StarterLeech')
+telegraph=TelegraphHelper('@Harshu_xD', 'https://t.me/Harshu_xD')
